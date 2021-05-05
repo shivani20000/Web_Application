@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aws.css">
+    <title>....Amazon Web Services Menu....</title>
+    <link rel = "icon" href =  "awscloud.svg" type = "image/x-icon"> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <!--  -->
+        <!-- <img src="ezgif.com-gif-maker.gif" alt="Project Name.gif" width="300"
+            height="300"> -->
+            <img src="aws.gif" alt="" width="200" height="100">
+        <h2 class="heading">Amazon Web Service</h2>
+        </div>
+
+    
+
+    <div class="cards">
+        <div class="card card1">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Create a Key Pair</h2>
+            <input type="text" name="key" placeholder="Enter the Key Name" class="fill">
+            <input type="hidden" name="choice" value="1">
+            <button type="submit">Create Key Pair</button>
+            </form>
+            <hr>
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Create a Security Group</h2>
+            <input type="text" name="sg" placeholder="Enter The secuirty Group Name" class="fill">
+            <input type="text" name="Type" placeholder="Enter Discription" class="fill">
+            <input type="hidden" name="choice" value="2">
+            <button id="btn" type="submit">Create SG</button>
+            </form>
+
+        </div>
+        <div class="card card2">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Create an EBS Volume</h2>
+            <input type="text" name="volume" placeholder="Provide AZ name To Create New Volume " class="fill">
+            <input type="text" name="size" placeholder="Provide size To New Volume(K/M/G)" class="fill">
+            <input type="hidden" name="choice" value="4">
+            <button type="submit">Create EBS Volume</button>
+
+            
+            </form>
+
+        </div>
+        <div class="card card3">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Launch an Instance</h2>
+
+            <input type="text" name="image" placeholder="Type image Id For Instance Launch" class="fill">
+            <input type="text" name="name" placeholder="Give The Name To New Instance" class="fill">
+            <input type="text" name="az" placeholder="Give AZ name" class="fill">
+            <input type="text" name="Type" placeholder="Enter The Instance Type(default t2 micro)" class="fill">
+            <input type="text" name="key" placeholder="Provide The Key Pair To New Instance I" class="fill">
+            <input type="text" name="sg" placeholder="Provide Security Group To New Instance" class="fill">
+            <input type="hidden" name="choice" value="3">
+            <button type="submit">Launch Instance</button>
+            </form>
+        </div>
+       
+        <div class="card card4">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Attach EBS Volume</h2>
+            <input type="text" name="vid" placeholder="Give Volume ID " class="fill">
+            <input type="text" name="iid" placeholder="Give Instance ID" class="fill">
+            <input type="text" name="volume" placeholder="Give Name To Volume " class="fill">
+            <input type="hidden" name="choice" value="5">
+            <button type="submit">Attach Volume To Instance</button>
+            </form>
+        </div>
+        <div class="card card5">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Create S3 Bucket</h2>
+            <input type="text" name="bucket" placeholder="Enter Bucket Name " class="fill">
+            <input type="text" name="region" placeholder="Enter region" class="fill">
+            <input type="hidden" name="choice" value="6">
+            <button type="submit">create bucket</button>
+            </form>
+        </div>    
+
+        <div class="card card6">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Create cloud front </h2>
+            <input type="text" name="buck" placeholder="Enter Bucket Name " class="fill">
+            <input type="text" name="obj" placeholder="Enter object name" class="fill">
+            <input type="hidden" name="choice" value="7">
+            <button type="submit">create cloud front</button>
+            </form>
+        </div>
+        <div class="card card7">
+            <form action="http://192.168.43.203/cgi-bin/awsapi.py">
+            <h2>Upload object to S3 </h2>
+            <input type="text" name="buck" placeholder="Enter Bucket Name " class="fill">
+            <input type="text" name="obj" placeholder="Enter object name" class="fill">
+            <input type="hidden" name="choice" value="8">
+            <button type="submit">Upload Object</button>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
