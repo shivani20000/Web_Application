@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvm.css">
+    <title>LVM Menu</title>
+    
+<body>
+<div class="container">
+    <div class="header">
+       <img src= "lvm.png" alt="" width="500" height="300">
+    </div>
+    <div class="cards">
+        <div class="card card1">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>See The Device Information</h4>
+            <label for="Node" >fdisk -l</label>
+            <input type="radio" value="Start" class="radio" name="node">
+            <input type="hidden" name="choice" value="1">
+            <button type="submit" id="btn">Submit</button>
+            </form>
+                
+        </div>
+        <div class="card card2">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Create Physical Volume</h4>
+            <input type="text" name="disk1" placeholder="Enter Disk Name: " class="fill">
+	    <input type="hidden" name="choice" value="2">
+            <button type="submit">Create PV</button>
+            </form>
+      
+        </div>
+	<div class="card card3">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Create Volume Group</h4>
+            <input type="text" name="vg" placeholder="Enter Name For VG: " class="fill">
+            <input type="text" name="disk1" placeholder="Enter First Disk Name: " class="fill">
+            <input type="text" name="disk2" placeholder="Enter Second Disk Name: " class="fill">
+            <input type="hidden" name="choice" value="3">
+            <button type="submit">Create VG</button>
+
+            </form>
+
+            
+        </div>
+
+        <div class="card card4">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Create Logical Volume</h4>
+            <input type="text" name="lvsize" placeholder="Enter Size For LV: " class="fill">
+            <input type="text" name="lv" placeholder="Enter LV Name: " class="fill">
+            <input type="text" name="vg" placeholder="Enter VG Name: " class="fill">
+            <input type="hidden" name="choice" value="4">
+	    <button type="submit">Create LV</button>
+	    </form>
+	</div>    
+          <div class="card card5">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Format Logical Volume</h4>
+            <input type="text" name="vg" placeholder="Enter VG Name: " class="fill">
+            <input type="text" name="lv" placeholder="Enter LV Name: " class="fill">
+            <input type="hidden" name="choice" value="5">
+            <button type="submit">Format LV</button>
+            </form>
+
+
+        </div>
+
+        <div class="card card6">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Mount Logical Volume</h4>
+	    <input type="text" name="fold" placeholder="Enter Folder Name : " class="fill">
+
+            <input type="text" name="lv" placeholder="Enter LV Name: " class="fill">
+	    <input type="text" name="vg" placeholder="Enter VG Name: " class="fill">
+            <input type="hidden" name="choice" value="6">
+            <button type="submit">Mount LV</button>
+            </form>
+
+        </div>
+        
+        <div class="card card7">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Extend Logical Volume Size</h4>
+            <input type="text" name="exsize" placeholder="Enter Size: " class="fill">
+	    <input type="text" name="vg" placeholder="Enter VG Name: " class="fill">
+	    <input type="text" name="lv" placeholder="Enter LV Name: " class="fill">
+            <input type="hidden" name="choice" value="7">
+            <button type="submit">Extend LV</button>
+            </form>
+           
+
+        </div>
+          <div class="card card8">
+            <form action="http://192.168.43.203/cgi-bin/lvmapi.py">
+            <h4>Format Extended Partation</h4>
+            <input type="text" name="vg" placeholder="Enter VG Name: " class="fill">
+            <input type="text" name="lv" placeholder="Enter LV Name: " class="fill">
+            <input type="hidden" name="choice" value="8">
+            <button type="submit">Format New Partation</button>
+            </form>
+
+
+        </div>
+
+       <script type="text/javascript">
+       textarea = document.querySelector("#text");
+       textarea.addEventListener('input',autoresizing,false)
+                    function autoresizing(){
+                        this.style.height ='auto';
+                        this.style.height=this.scrollHeight +'px';
+                    }
+           </script>
+        
+
+    </div>
+</div>
+</body>
+</html>
