@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 300%;
+background-color: #87cefa;
+background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+background-repeat: repeat;
+}
+.header{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.cards{
+    height: 280%;
+    width: 100%;
+    display: grid;
+    grid-gap: 1rem;
+   
+    grid-template-rows: 306px 306px 306px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 370px));
+    
+    justify-content: space-evenly;
+    
+}
+.card{
+
+    border: 2px solid black;
+    margin-top: 10px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    background:	#3cb371;
+
+   cursor: pointer;
+     border-radius: 10px;
+    
+   
+ transform-style: preserve-3d;
+ /* box-shadow: 2px 2px 4px 4px rgb(192, 114, 86); */
+ transition: .3s transform; 
+ 
+}
+.card h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    color:#2f4f4f;
+    /* font-family: 'Fraunces', serif; */
+    font-family:  'Dancing Script', cursive;
+    text-transform: capitalize;
+   
+} 
+.card h5{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #307dc3 ;
+    margin-top: 5px;
+    font-family:  'Dancing Script', cursive;
+    text-transform: capitalize;
+}
+
+.card hr{
+    padding: 2px;
+    
+    margin-top: 10px;
+    background: #3cb371;
+}
+.card input{
+    width: 80%;
+    padding: 8px;
+    border-radius:  8px ;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+    outline: none;
+    
+}
+.card .radio{
+    width: 20%;
+}
+.card input:hover,:focus{
+    border: 2px black;
+    border-bottom: 2px solid black;
+    outline: none;
+    background: whitesmoke;
+ }
+ .card button{
+    border-radius: 8px;
+    border: none;
+    background-color:linear-gradient(to right, red , yellow);;
+    width: 50%;
+    margin-bottom: 0px;
+    margin-top: 3px;
+    padding: 8px;
+
+    
+}
+button:hover,
+button:focus {
+  box-shadow: 10px 10px 5px grey;
+  transform: translateY(-0.25em);
+}
+.card2 #btn{
+    margin-top: -5px;
+}
+.card button a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 15px;
+}
+.card6 textarea{
+    overflow: hidden;
+
+}
+.card6 button{
+    overflow : hidden;
+}
+
+.card button a:hover{
+    color: SlateBlue;
+    font-style: oblique;
+    font-weight: bold;
+}
+
